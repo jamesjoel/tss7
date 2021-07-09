@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    height: 100px;
+    width: 100%;
+    background-color: #789965;
+}
+.content{
+    height: 700px;
+    width: 100%;
+    background-color: #93214A;
+}
+.footer{
+    background-color: #789965;
+    height: 250px;
+    width: 100%;
+
+}

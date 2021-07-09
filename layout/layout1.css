@@ -1,0 +1,15 @@
+.header{
+    height: 80px;
+    width: 100%;
+    background-color: #0A82BE;
+}
+.content{
+    height: 600px;
+    width: 100%;
+    background-color: #354248;
+}
+.footer{
+    height: 250px;
+    width: 100%;
+    background-color: #0A82BE;
+}

@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css" >
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .bg-purple{
+                background-color: #9139A1;
+            }
+            .bg-gray{
+                background-color: #ACAEAC;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a data-toggle="modal" data-target="#loginbox" href="#" class="text-light p-3 d-inline-block">Login</a>
+                <a data-toggle="modal" data-target="#signupbox" href="#" class="text-light p-3 d-inline-block">Signup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="navbar navbar-expand-sm bg-purple navbar-dark sticky-top">
+            <div class="container">
+                <a href="#" class="navbar-brand">Flipkart.com</a>
+                <button data-toggle="collapse" data-target="#menu" class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="menu" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+        <div style="background-image: url('images/bg1.jpg'); background-size : 100% 100%; height: 300px;" class="jumbotron bg-gray">
+            <div class="container">
+                <h1 class="text-light">Welcome to Flipkart.com</h1>
+                <p class="text-light">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit rem sit qui, iure dignissimos voluptatibus et officia. Rem eligendi accusamus, maiores, aut eveniet autem exercitationem, perferendis voluptates at iusto corrupti.
+                    <button class="btn btn-light btn-info btn-sm">More</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad blanditiis est at aliquid debitis soluta iste autem tempora culpa. Laudantium harum, aliquam delectus cupiditate nesciunt atque hic dolorem nihil sequi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio culpa nesciunt possimus adipisci numquam minus voluptatum beatae nihil magni quidem ad, aliquid ratione iste fuga assumenda similique eaque eveniet delectus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, cupiditate! Tenetur, esse reprehenderit. Saepe quia modi exercitationem obcaecati laborum facere est dignissimos similique. Quaerat eius, illo consequatur voluptatibus praesentium animi!
+            </div>
+
+        </div>
+
+
+        <div class="modal fade" id="loginbox">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>User Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input placeholder="Username" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input placeholder="Password" type="password" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-sm btn-danger">Close</button>
+                        <button class="btn btn-sm btn-success">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="signupbox">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>User Registration</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input placeholder="Full Name" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input placeholder="Username" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input placeholder="Password" type="password" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Re-Password</label>
+                            <input placeholder="Re-Password" type="password" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Contact</label>
+                            <input placeholder="Contact" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-sm btn-danger">Close</button>
+                        <button class="btn btn-sm btn-success">Signup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

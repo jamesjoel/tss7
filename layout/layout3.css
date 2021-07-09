@@ -1,0 +1,24 @@
+body{
+    background-color: #546CEA;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 120px;
+    width: 100%;
+    background-color: #354248;
+}
+.content{
+    height: 700px;
+    width: 100%;
+    
+}
+.footer{
+    height: 250px;
+    width: 100%;
+    background-color: #354248;
+}
+.wrapper{
+    width: 970px;
+    margin: 0 auto;
+}
