@@ -1,0 +1,20 @@
+.bg-gray{
+    background-color: #cdcecc;
+}
+.top-icon a{
+    display: inline-block;
+    width: 35px;
+}
+.btn-yellow{
+    background-color: #EEB55B;
+    color: #FFF;
+}
+.big-img{
+    height: 350px;
+    background-image: url("../images/bg1.jpg");
+    background-size: 100% 100%;
+}
+.mt-minuse{
+    margin-top: -30px;
+    z-index: 9999 !important;
+}
