@@ -6,9 +6,7 @@ app.use(express.static(__dirname+"/assets"));
 
 app.get("/", (req, res)=>{
     var a = "indore";
-    
     var obj = { x : a, y : "rohit" };
-
     res.render("home", obj);
     // res.sendFile(__dirname+"/home.html")
 })
