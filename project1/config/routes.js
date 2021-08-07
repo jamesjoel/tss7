@@ -5,5 +5,9 @@ routes.use("/", require("../controllers/home"));
 routes.use("/about", require("../controllers/about"));
 routes.use("/login", require("../controllers/login"));
 routes.use("/contact", require("../controllers/contact"));
+routes.use("/signup", require("../controllers/signup"));
+// localhost:3000/admin
+routes.use("/admin", require("./admin_route"));
+
 
 module.exports = routes;

@@ -1,0 +1,10 @@
+var express = require("express");
+var routes = express.Router();
+
+// localhost:3000/admin   /
+routes.use("/", require("../controllers/admin/login"));
+// localhost:3000/admin   /dashboard
+routes.use("/dashboard", require("../controllers/admin/dashboard"));
+
+
+module.exports = routes;
