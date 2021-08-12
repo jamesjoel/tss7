@@ -1,0 +1,63 @@
+<%- include('header') %>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Add New Product</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <form action="/admin/product/add" method="post">
+                            <div class="card mb-5">
+                                <div class="card-header">
+                                    <h4>Add</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label>Product Title</label>
+                                        <input name="title" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Price</label>
+                                        <input name="price" type="text" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Category</label>
+                                        <select name="category" class="form-control">
+                                            <option>Select</option>
+                                            <option>Home Appliance</option>
+                                            <option>Electronics</option>
+                                            <option>Mobile and Computer</option>
+                                            <option>Fashion Men</option>
+                                            <option>Fashion Women</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Detail</label>
+                                        <textarea name="detail" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Discount</label>
+                                        <input name="discount" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="submit" value="Add Product" class="btn btn-primary" />
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+<%- include('footer') %>
