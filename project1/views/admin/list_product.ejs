@@ -1,0 +1,58 @@
+<%- include('header') %>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">List All Product</h1>
+                        
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <table class="table table-dark table-hover table-bordered">
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>Title</th>
+                                    <th>Price</th>
+                                    <th>Detail</th>
+                                    <th>Category</th>
+                                    <th>Discount</th>
+                                </tr>
+                                <% products.forEach(function(x, n){ %>
+                                    <tr>
+                                        <td><%= n+1 %></td>
+                                        <td><%= x.title %></td>
+                                        <td><%= x.price %></td>
+                                        <td><%= x.detail %></td>
+                                        <td><%= x.category %></td>
+                                        <td><%= x.discount %></td>
+                                    </tr>
+
+
+                                <% }) %>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+<%- include('footer') %>
+
+<!-- 
+    var arr = [{ name : "rohit" }, {}, {}];
+
+    arr.forEach(function(x, n){
+        x.name
+    })
+
+
+
+
+
+ -->

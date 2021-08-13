@@ -10,9 +10,34 @@ routes.get("/add", (req, res)=>{
     // res.send("hello");
 })
 
+
+// location:3000/admin/product/list
+routes.get("/list", (req, res)=>{
+    
+    MongoClient.connect(mongoUrl, (err, con)=>{
+        var db = con.db('tss7');
+        db.collection("product").find().toArray((err, result)=>{
+
+            // console.log(result);
+
+            var pageData = { products : result };
+            res.render("admin/list_product", pageData);
+        });
+    })
+
+})
+
+
+
+
 // location:3000/admin/product/add
 routes.post("/add", (req, res)=>{
     //console.log(req.body);
+
+    // the parseInt() fun in convert string to int
+    req.body.price = parseInt(req.body.price);
+    req.body.discount = parseInt(req.body.discount);
+
     MongoClient.connect(mongoUrl, (err, con)=>{
         var db  = con.db("tss7");
         db.collection("product").insertOne(req.body, (err)=>{
