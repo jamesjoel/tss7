@@ -15,6 +15,17 @@ app.use(cookieParser());
 app.use(session({ secret : "hello"}));
 app.use(flash());
 
+app.use(function(req, res, next){
+    res.locals.logo = "The Stepping Stone";
+    res.locals.usersession = req.session;
+    /*
+       .fullname
+       ._id
+       .isLoggedIn
+    */
+    next();
+});
+
 
 app.use(routes);
 
@@ -22,3 +33,12 @@ var port = process.env.PORT || 3000;
 app.listen(port, ()=>{
     console.log("server running");
 })
+/*
+var obj = { firstname : "james", lastname : "joel" };
+obj.a = "rohit";
+obj.b = "amar";
+
+var x = obj;
+
+
+*/

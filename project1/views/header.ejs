@@ -51,8 +51,14 @@
                                     </li>
                                     
                                     <li><a href="/contact">Contact</a></li>
+                                    <% if(usersession.isLoggedIn){ %>
+
+                                        <li><a href="/logout">Logout</a></li>
+                                        <li><a href="/profile">Profile</a></li>
+                                    <% }else{ %>
                                     <li><a href="/login">Login</a></li>
                                     <li><a href="/signup">Signup</a></li>
+                                    <% } %>
                                 </ul>
                             </nav>
                         </div>
