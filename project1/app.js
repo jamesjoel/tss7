@@ -5,6 +5,7 @@ var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var session = require("express-session");
 var flash = require("express-flash");
+var cachec= require("nocache");
 
 
 app.set("view engine", "ejs");
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(session({ secret : "hello"}));
 app.use(flash());
+app.use(cachec());
 
 app.use(function(req, res, next){
     res.locals.logo = "The Stepping Stone";
