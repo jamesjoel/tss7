@@ -1,0 +1,75 @@
+<%- include('header') %>
+    <main>
+        <!-- Hero Area Start-->
+        
+        <!-- Hero Area End-->
+        <!-- About Details Start -->
+        <div class="about-details section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-1 col-lg-8 offset-lg-2 col-md-8 offset-md-2">
+                        <div class="about-details-cap mb-50">
+                            <h4>Update Your Profile</h4>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Update User Profile</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label>Full Name</label>
+                                        <input type="text" class="form-control" value="<%= result.full_name %>"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username/Email</label>
+                                        <input type="text" disabled class="form-control" value="<%= result.username %>"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <textarea class="form-control"><%= result.address %></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>City</label>
+                                        <select class="form-control">
+                                            <option>Select</option>
+                                            <option <% if(result.city == "Indore")  {%> selected <% } %>>Indore</option>
+                                            <option <% if(result.city == "Mumbai")  {%> selected <% } %>>Mumbai</option>
+                                            <option <% if(result.city == "Pune")  {%> selected <% } %>>Pune</option>
+                                            <option <% if(result.city == "Delhi")  {%> selected <% } %>>Delhi</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Contact</label>
+                                        <input type="text" class="form-control" value="<%= result.contact %>" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Gender</label>
+                                        <Br />
+                                        Male <input <% if(result.gender=="male") {%> checked <% } %> type="radio" name="gender" value="male" />
+                                        Female <input <% if(result.gender=="female") {%> checked <% } %> type="radio" name="gender" value="female" />
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="submit" value="Update Profile" class="btn btn-primary" />
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Shop Method End-->
+    </main>
+<%- include('footer') %>
+
+<!-- 
+
+    jamesjoel@gmail.com
+
+
+
+
+ -->

@@ -1,6 +1,9 @@
 var express = require("express");
 var app = express();
 var routes = require("./config/routes");
+
+// res.sendFile(__dirname+"/home.html");
+
 var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var session = require("express-session");
