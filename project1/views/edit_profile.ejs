@@ -10,6 +10,7 @@
                     <div class="offset-xl-1 col-lg-8 offset-lg-2 col-md-8 offset-md-2">
                         <div class="about-details-cap mb-50">
                             <h4>Update Your Profile</h4>
+                            <form action="/profile/update" method="post">
                             <div class="card">
                                 <div class="card-header">
                                     <h4>Update User Profile</h4>
@@ -17,19 +18,19 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Full Name</label>
-                                        <input type="text" class="form-control" value="<%= result.full_name %>"/>
+                                        <input type="text" class="form-control" name="full_name" value="<%= result.full_name %>"/>
                                     </div>
                                     <div class="form-group">
                                         <label>Username/Email</label>
-                                        <input type="text" disabled class="form-control" value="<%= result.username %>"/>
+                                        <input type="text" disabled class="form-control" name="username" value="<%= result.username %>"/>
                                     </div>
                                     <div class="form-group">
                                         <label>Address</label>
-                                        <textarea class="form-control"><%= result.address %></textarea>
+                                        <textarea class="form-control" name="address"><%= result.address %></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>City</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name="city">
                                             <option>Select</option>
                                             <option <% if(result.city == "Indore")  {%> selected <% } %>>Indore</option>
                                             <option <% if(result.city == "Mumbai")  {%> selected <% } %>>Mumbai</option>
@@ -39,7 +40,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Contact</label>
-                                        <input type="text" class="form-control" value="<%= result.contact %>" />
+                                        <input type="text" class="form-control" name="contact" value="<%= result.contact %>" />
                                     </div>
                                     <div class="form-group">
                                         <label>Gender</label>
@@ -52,6 +53,7 @@
                                     <input type="submit" value="Update Profile" class="btn btn-primary" />
                                 </div>
                             </div>
+                            </form>
                             
                         </div>
 

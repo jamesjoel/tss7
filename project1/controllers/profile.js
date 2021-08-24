@@ -2,6 +2,7 @@ var express = require("express");
 var routes = express.Router();
 var MongoClient = require("mongodb").MongoClient;
 var mongodb = require("mongodb");
+var sha1 = require("sha1");
 
 routes.get("/", (req, res)=>{
     
@@ -36,7 +37,55 @@ routes.get("/edit", (req, res)=>{
     })
 })
 
+routes.post("/update", (req, res)=>{
+    // console.log(req.body);
+    var _id = mongodb.ObjectId(req.session._id);
+    MongoClient.connect("mongodb://localhost:27017", (err, con)=>{
+        var db = con.db("tss7");
+        db.collection("user").updateMany({_id : _id}, {$set : req.body}, (err, result)=>{
+            res.redirect("/profile");
+        })
+    })
+})
 
+
+routes.get("/change_password", (req, res)=>{
+    res.render("change_password", { msg : req.flash("msg")});
+});
+routes.post("/update_password", (req, res)=>{
+    // console.log(req.body);
+    var current_pass = req.body.current_pass;
+    var new_pass = req.body.new_pass;
+    var confirm_new_pass = req.body.confirm_new_pass;
+
+    var _id = mongodb.ObjectId(req.session._id);
+    MongoClient.connect("mongodb://localhost:27017", (err, con)=>{
+        var db = con.db("tss7");
+        db.collection("user").find({ _id : _id }).toArray((err, result)=>{
+            // console.log(result[0]);
+            var user = result[0];
+            if(user.password == sha1(current_pass))
+            {
+                if(new_pass == confirm_new_pass)
+                {
+                    db.collection("user").updateMany({_id : _id}, { $set : { password : sha1(new_pass)}}, (err, result)=>{
+                        res.redirect("/logout");
+                    })
+                }
+                else
+                {
+                    req.flash("msg", "New Password and Confirm New Password is Incorect !");
+                    res.redirect("/profile/change_password");
+                }
+            }
+            else
+            {
+                req.flash("msg", "Current Password is Incorect !");
+                res.redirect("/profile/change_password");
+            }
+        })
+    })
+})
 
 module.exports = routes;
 
