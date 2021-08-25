@@ -12,7 +12,7 @@
 
                     
                     <div class="row">
-                        <div class="col-md-8 offset-md-2">
+                        <div class="col-md-12">
                             <table class="table table-dark table-hover table-bordered">
                                 <tr>
                                     <th>S.No.</th>
@@ -21,6 +21,8 @@
                                     <th>Detail</th>
                                     <th>Category</th>
                                     <th>Discount</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                                 <% products.forEach(function(x, n){ %>
                                     <tr>
@@ -30,6 +32,8 @@
                                         <td><%= x.detail %></td>
                                         <td><%= x.category %></td>
                                         <td><%= x.discount %></td>
+                                        <td><a href="#" class="btn btn-sm btn-info">Edit</a></td>
+                                        <td><a href="/admin/product/delete/<%= x._id  %>" class="btn btn-sm btn-danger">Delete</a></td>
                                     </tr>
 
 
