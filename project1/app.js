@@ -9,7 +9,7 @@ var cookieParser = require("cookie-parser");
 var session = require("express-session");
 var flash = require("express-flash");
 var cachec= require("nocache");
-
+var upload = require("express-fileupload");
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname+"/assets"));
@@ -19,6 +19,7 @@ app.use(cookieParser());
 app.use(session({ secret : "hello"}));
 app.use(flash());
 app.use(cachec());
+app.use(upload());
 
 app.use(function(req, res, next){
     res.locals.logo = "The Stepping Stone";

@@ -5,7 +5,7 @@ var routes = express.Router();
 // localhost:3000/admin   /
 routes.use("/", require("../controllers/admin/login"));
 // localhost:3000/admin   /dashboard
-var arr = ["/dashboard", "/product", "/category"];
+var arr = ["/dashboard", "/category"];
 routes.use(arr, (req, res, next)=>{
     if(! req.session.isAdminLoggedIn){
         res.redirect("/admin");

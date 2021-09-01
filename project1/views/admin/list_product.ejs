@@ -20,6 +20,7 @@
                                     <th>Price</th>
                                     <th>Detail</th>
                                     <th>Category</th>
+                                    <th>Image</th>
                                     <th>Discount</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
@@ -31,6 +32,7 @@
                                         <td><%= x.price %></td>
                                         <td><%= x.detail %></td>
                                         <td><%= x.category %></td>
+                                        <td><img src="/product_images/<%= x.pro_image %>" height="80" width="80" /></td>
                                         <td><%= x.discount %></td>
                                         <td><a href="#" class="btn btn-sm btn-info">Edit</a></td>
                                         <td><a href="/admin/product/delete/<%= x._id  %>" class="btn btn-sm btn-danger">Delete</a></td>
