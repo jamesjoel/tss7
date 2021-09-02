@@ -1,0 +1,41 @@
+<%- include('header') %>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Update Category</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <form action="/admin/category/update/<%= result._id %>" method="post">
+                            <div class="card mb-5">
+                                <div class="card-header">
+                                    <h4>Update</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label>Category Title</label>
+                                        <input name="title" value="<%= result.title %>" type="text" class="form-control" />
+                                    </div>
+                                    
+                                </div>
+                                <div class="card-footer">
+                                    <input type="submit" value="Update Category" class="btn btn-primary" />
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+<%- include('footer') %>
