@@ -77,4 +77,10 @@ module.exports = routes;
 .deleteOne, .removeOne
 
 
+Create
+Rretrive
+Update
+Delete
+
+
 */

@@ -10,15 +10,23 @@ var path = require("path");
 var random = require("random-string");
 
 
-
-
-
 // location:3000/admin/product/add
 routes.get("/add", (req, res)=>{
     res.render("admin/add_product");
     // res.send("hello");
 })
 
+
+routes.get("/edit/:id", (req, res)=>{
+    var id = mongodb.ObjectId(req.params.id);
+    MongoClient.connect(mongoUrl, (err, con)=>{
+        var db = con.db("tss7");
+        db.collection("product").find({ _id : id }).toArray((err, result)=>{
+
+            res.render("admin/edit_product", { result : result[0]});
+        })
+    })
+})
 
 // location:3000/admin/product/list
 routes.get("/list", (req, res)=>{
@@ -36,6 +44,21 @@ routes.get("/list", (req, res)=>{
 
 })
 
+//  admin/product/update
+// admin/product/update/21fd5g421dfg54
+
+
+routes.post("/update/:id", (req, res)=>{
+    // req.body
+    // req.params.id
+    var id = mongodb.ObjectId(req.params.id);
+    MongoClient.connect(mongoUrl, (err, con)=>{
+        var db = con.db("tss7");
+        db.collection("product").updateOne({ _id : id }, { $set : req.body }, (err, result)=>{
+            res.redirect("/admin/product/list");
+        })
+    })
+})
 
 
 

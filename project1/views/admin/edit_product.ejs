@@ -1,0 +1,72 @@
+<%- include('header') %>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Update Product</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <form action="/admin/product/update/<%= result._id %>" method="post" enctype="multipart/form-data">
+                            <div class="card mb-5">
+                                <div class="card-header">
+                                    <h4>Update</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label>Product Title</label>
+                                        <input name="title" type="text" value="<%= result.title %>" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Price</label>
+                                        <input name="price" type="text" value="<%= result.price %>" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Current Image</label>
+                                        <Br />
+                                        <img src="/product_images/<%= result.pro_image %>" height="100" width="100" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Image</label>
+                                        <input name="image" type="file" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Category</label>
+                                        <select name="category" class="form-control">
+                                            <option>Select</option>
+                                            <option <% if(result.category == "Home Appliance") { %> selected <% } %>>Home Appliance</option>
+                                            <option <% if(result.category == "Electronics") { %> selected <% } %>>Electronics</option>
+                                            <option  <% if(result.category == "Mobile and Computer") { %> selected <% } %>>Mobile and Computer</option>
+                                            <option  <% if(result.category == "Fashion Men") { %> selected <% } %>>Fashion Men</option>
+                                            <option  <% if(result.category == "Fashion Women") { %> selected <% } %>>Fashion Women</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Detail</label>
+                                        <textarea name="detail" class="form-control"><%= result.detail %></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Product Discount</label>
+                                        <input name="discount" type="text" value="<%= result.discount %>" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <input type="submit" value="Update Product" class="btn btn-primary" />
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+<%- include('footer') %>

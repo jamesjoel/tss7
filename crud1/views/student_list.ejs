@@ -1,0 +1,32 @@
+<%- include('header') %>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center">List All Student</h2>
+            <table class="table table-dark table-bordered table-striped">
+                <tr>
+                    <Th>S.No.</Th>
+                    <Th>Full Name</Th>
+                    <Th>Age</Th>
+                    <Th>Fee</Th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <% result.forEach(function(x, n){ %>
+                    <tr>
+                        <td><%= n+1 %></td>
+                        <td><%= x.full_name %></td>
+                        <td><%= x.age %></td>
+                        <td><%= x.fee %></td>
+                        <td><a href="/student/edit/<%= x._id %>" class="btn btn-sm btn-info">Edit</a></td>
+                        <td><a href="/student/delete/<%= x._id %>" class="btn btn-sm btn-danger">Delete</a></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>
