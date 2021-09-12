@@ -13,6 +13,34 @@ export class HomeComponent implements OnInit {
   age = 25;
   city = "indore";
 
+  color = ["red", "green", "blue", "yellow", "pink"];
+
+  student = [
+    {
+      name : "rohit",
+      age : 25,
+      city : "indore"
+    },
+    {
+      name : "nilesh",
+      age : 23,
+      city : "mumbai"
+    },
+    {
+      name : "priya",
+      age : 22,
+      city : "pune"
+    }
+  ];
+
+
+
+
+
+
+
+
+
   constructor() {
     
    }

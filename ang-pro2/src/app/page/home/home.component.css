@@ -1,0 +1,7 @@
+div{
+    width: 100px;
+    min-height: 100px;
+    background-color: #124571;
+    /* float: left; */
+    margin: 5px;
+}

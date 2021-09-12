@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  check1 = false;
+  check2 = 200;
   constructor() { }
 
   ngOnInit(): void {

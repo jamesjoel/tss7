@@ -1,1 +1,26 @@
-<p>about works!</p>
+<h2>Angular *ngIf </h2>
+<h1 *ngIf="check1==true">Hello Indore</h1>
+<h1 *ngIf="check2 > 100">Hello Mumbai</h1>
+<h1 *ngIf="check1 == true || check2 == 200">Hello Pune</h1>
+<ng-template [ngIf]="check2==200">
+    <h2>this is sample exp of [ngIf]</h2>
+</ng-template>
+<h2>---------------xxxxxxxxxxxxxxxxxxxxx----------------------</h2>
+<h2>Angular *ngIf and Else</h2>
+<h1 *ngIf="check1==true; else myid">
+    YES
+</h1>
+<ng-template #myid>
+    <h1>
+        NO
+    </h1>
+</ng-template>
+
+<h2>---------------xxxxxxxxxxxxxxxxxxxxx----------------------</h2>
+<p *ngIf="check1==true; then block1 else block2"></p>
+<ng-template #block1></ng-template>
+<ng-template #block2></ng-template>
+
+
+
+
