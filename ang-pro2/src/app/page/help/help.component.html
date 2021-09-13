@@ -1,1 +1,25 @@
-<p>help works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <p>help works!</p>
+        <h2>Event Binding</h2>
+        <button (click)="demo1()" class="btn btn-info">Click here</button>
+        <button (dblclick)="demo2()" class="btn btn-warning">Dubble Click here</button>
+        <h2 (click)="demo1()" (dblclick)="demo2()">Hello</h2>
+        <hr />
+        <hr />
+        <div (mouseover)="demo3()" (mouseout)="demo4()" class="box1"></div>
+        <h3 (mouseout)="demo6()" (mousemove)="demo5()" style="color : red; font-size : {{ x }}px">Come Here</h3>
+        <h2>{{ x }}</h2>
+        <hr />
+        <input (keydown)="demo7()" (keyup)="demo9()" type="text" />
+        <Hr />
+        <input type="text" />
+        <br />
+        <br />
+        <input type="text" (focus)="demo10()" (blur)="demo11()" />
+        <br />
+        <br />
+        <input type="text" />
+        <br />
+    </div>
+</div>

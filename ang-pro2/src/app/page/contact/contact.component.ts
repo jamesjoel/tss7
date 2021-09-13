@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  a = 13;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
+/*
+var a = 3;
+swich(a){
+  case 1 : console.log("indore")
+        break;
+  case 2 : console.log("indore")
+        break;
+  case 3 : console.log("indore")
+        break;
+
+  default : 
+}
+
+
+*/
