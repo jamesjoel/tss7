@@ -10,6 +10,9 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HelpComponent } from './page/help/help.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ApiDataComponent } from './page/api-data/api-data.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +21,13 @@ import { HelpComponent } from './page/help/help.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    HelpComponent
+    HelpComponent,
+    ApiDataComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

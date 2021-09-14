@@ -5,6 +5,8 @@ import { AboutComponent } from './page/about/about.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { HomeComponent } from './page/home/home.component';
 import { HelpComponent } from './page/help/help.component';
+import { ApiDataComponent } from './page/api-data/api-data.component';
+
 
 const routes: Routes = [
   {
@@ -22,6 +24,10 @@ const routes: Routes = [
   {
     path : "help",
     component : HelpComponent
+  },
+  {
+    path : "apidata",
+    component : ApiDataComponent
   }
 ];
 
