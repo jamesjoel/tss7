@@ -6,7 +6,7 @@ import { ContactComponent } from './page/contact/contact.component';
 import { HomeComponent } from './page/home/home.component';
 import { HelpComponent } from './page/help/help.component';
 import { ApiDataComponent } from './page/api-data/api-data.component';
-
+import { TeacherComponent } from './page/teacher/teacher.component';
 
 const routes: Routes = [
   {
@@ -28,6 +28,10 @@ const routes: Routes = [
   {
     path : "apidata",
     component : ApiDataComponent
+  },
+  {
+    path : "teacher",
+    component : TeacherComponent
   }
 ];
 

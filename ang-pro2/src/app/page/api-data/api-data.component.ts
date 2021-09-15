@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-interface Data{
-  id : null;
+interface Abc{
+  id : null|number;
   email : string;
   first_name : string;
   last_name : string;
   avatar : string;
+  demo? : null|any;
 }
 
 /*
@@ -26,8 +27,9 @@ interface Product {
   styleUrls: ['./api-data.component.css']
 })
 export class ApiDataComponent implements OnInit {
+  allData:Abc[] = [];
 
-  allData:Data[]=[];
+  // allData:Data[]=[];
   // allData:Product[]=[];
 
   constructor(private _http : HttpClient) {

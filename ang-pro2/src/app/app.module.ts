@@ -12,6 +12,7 @@ import { HelpComponent } from './page/help/help.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ApiDataComponent } from './page/api-data/api-data.component';
+import { TeacherComponent } from './page/teacher/teacher.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ApiDataComponent } from './page/api-data/api-data.component';
     HeaderComponent,
     FooterComponent,
     HelpComponent,
-    ApiDataComponent
+    ApiDataComponent,
+    TeacherComponent
   ],
   imports: [
     BrowserModule,
