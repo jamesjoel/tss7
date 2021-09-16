@@ -9,7 +9,9 @@ export class ContactComponent implements OnInit {
 
   a = 13;
 
-  constructor() { }
+  constructor() {
+    console.log("welcome");
+   }
 
   ngOnInit(): void {
   }
