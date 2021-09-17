@@ -1,0 +1,33 @@
+<app-three-box></app-three-box>
+<div  class="products">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="titlepage">
+                <h2>Our Products</h2>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+          <div class="col-md-12">
+             <div class="our_products">
+                <div class="row">
+                   <div *ngFor="let x of allProducts" class="col-md-4 margin_bottom1">
+                      <div class="product_box">
+                         <figure><img src="http://localhost:3000/images/{{ x.image }}" style="height: 250px !important;" alt="#"/></figure>
+                         <p>{{ x.name }}</p>
+                         <p><small>$ {{ x.price }}</small></p>
+                         <a href="#"><h3>Buy</h3></a>
+                      </div>
+                   </div>
+                   
+                   <div class="col-md-12">
+                      <a class="read_more" href="#">See More</a>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <app-contact></app-contact>
