@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ProductService } from '../../services/product.service';
 
 interface Pro{
   _id? : null|string;
@@ -20,9 +20,8 @@ export class HomeComponent implements OnInit {
 
   allProducts:Pro[]=[];
   // Depe Injection
-  constructor(private _http : HttpClient) {
-    this._http.get<any>("http://localhost:3000/api/product").subscribe((result)=>{
-      // console.log(result);
+  constructor(private _proService : ProductService) {
+    this._proService.getData().subscribe((result)=>{
       this.allProducts = result;
     })
    }

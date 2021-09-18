@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '../../services/category.service';
+
+interface Category{
+  _id? : string|null;
+  name : string;
+}
 
 @Component({
   selector: 'app-header',
@@ -7,7 +13,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  allCategory : Category[] = [];
+  constructor(private _cateService : CategoryService) {
+    this._cateService.getData().subscribe((result)=>{
+      this.allCategory = result;
+    })
+   }
 
   ngOnInit(): void {
   }
