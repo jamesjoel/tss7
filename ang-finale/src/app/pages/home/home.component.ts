@@ -30,3 +30,22 @@ export class HomeComponent implements OnInit {
   }
 
 }
+
+/*
+:3000/api/student
+:3000/api/teacher
+:3000/api/admin
+:3000/api/user
+:3000/api/user
+
+
+Address :
+----------------
+----------------
+----------------
+Pin-code
+452001
+
+
+
+*/
