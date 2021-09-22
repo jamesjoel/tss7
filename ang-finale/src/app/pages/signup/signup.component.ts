@@ -15,15 +15,30 @@ export class SignupComponent implements OnInit {
 
   myForm:FormGroup;
 
+  a=false;
+
   constructor(private _fb : FormBuilder) {
     this.myForm = this._fb.group({
       full_name : ["", Validators.required],
-      email : ["", Validators.required],
+      email : ["", [Validators.required, Validators.email]],
       pass : ["", Validators.required]
     });
+
+    console.log(this.myForm);
    }
 
   ngOnInit(): void {
+  }
+
+  save(){
+
+    if(this.myForm.invalid){
+      this.a=true;
+      return;
+    }
+    console.log(this.myForm.value);
+
+    
   }
 
 }

@@ -7,8 +7,9 @@ import { HomeComponent } from './page/home/home.component';
 import { HelpComponent } from './page/help/help.component';
 import { ApiDataComponent } from './page/api-data/api-data.component';
 import { TeacherComponent } from './page/teacher/teacher.component';
+import { SignupComponent } from './page/signup/signup.component';
 
-const routes: Routes = [
+ const routes: Routes = [
   {
     path : "",
     component : HomeComponent
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path : "teacher",
     component : TeacherComponent
+  },
+  {
+    path : "signup",
+    component : SignupComponent
   }
 ];
 

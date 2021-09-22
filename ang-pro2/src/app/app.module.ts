@@ -10,9 +10,13 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HelpComponent } from './page/help/help.component';
 
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 import { ApiDataComponent } from './page/api-data/api-data.component';
 import { TeacherComponent } from './page/teacher/teacher.component';
+import { SignupComponent } from './page/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +28,15 @@ import { TeacherComponent } from './page/teacher/teacher.component';
     FooterComponent,
     HelpComponent,
     ApiDataComponent,
-    TeacherComponent
+    TeacherComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
