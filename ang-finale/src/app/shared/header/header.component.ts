@@ -3,7 +3,7 @@ import { CategoryService } from '../../services/category.service';
 
 interface Category{
   _id? : string|null;
-  name : string;
+  title : string;
 }
 
 @Component({

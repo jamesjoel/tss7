@@ -23,6 +23,26 @@
                 <div class="text-danger" *ngIf="a && myForm.controls.pass.errors">Insert Your Password</div>
             </div>
             <div class="form-group">
+                <label>Re-Password</label>
+                <input [ngClass]="{'is-invalid' : a && myForm.controls.re_pass.errors}" formControlName="re_pass" type="password" placeholder="Password" class="form-control" />
+                <div class="text-danger" *ngIf="a && myForm.controls.re_pass.errors">Insert Your Re-Password</div>
+            </div>
+            <div class="form-group">
+                <label>Contact</label>
+                <input [ngClass]="{'is-invalid' : a && myForm.controls.contact.errors}" formControlName="contact" type="text" placeholder="Contact" class="form-control" />
+                <div class="text-danger" *ngIf="a && myForm.controls.contact.errors">Insert Your Contact Number</div>
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <select [ngClass]="{'is-invalid' : a && myForm.controls.city.errors}" formControlName="city" class="form-control">
+                    <option value="">Select</option>
+                    <option value="indore">Indore</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="pune">Pune</option>
+                </select>
+                <div class="text-danger" *ngIf="a && myForm.controls.city.errors">Select Your City</div>
+            </div>
+            <div class="form-group">
                 <input type="submit" (click)="save()" value="Singup" class="btn btn-primary" />
             </div>
             </form>

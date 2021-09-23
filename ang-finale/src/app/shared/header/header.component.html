@@ -34,7 +34,7 @@
                          <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Category</a>
                             <div class="dropdown-menu">
-                               <a *ngFor="let x of allCategory" class="dropdown-item" href="#">{{ x.name }}</a>
+                               <a *ngFor="let x of allCategory" class="dropdown-item" href="#">{{ x.title }}</a>
                                
                             </div>
                          </li>
@@ -43,7 +43,7 @@
                             <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                          </li>
                          <li class="nav-item d_none">
-                            <a class="nav-link" href="#">Login</a>
+                            <a class="nav-link" routerLink="/login">Login</a>
                          </li>
                          <li class="nav-item d_none">
                             <a class="nav-link" routerLink="/signup">Signup</a>
