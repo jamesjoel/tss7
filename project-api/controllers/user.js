@@ -3,6 +3,16 @@ var routes = express.Router();
 var MongoClient = require("mongodb").MongoClient;
 var mongoUrl = "mongodb://localhost:27017";
 var sha1 = require("sha1");
+var jwt = require("jsonwebtoken");
+/*
+    { a : "Rohit"}, "Priyanka" -------- 254125511SDFGSDF
+
+
+
+    "Priyanka", TOKEN --- { a : "Rohit" }
+
+
+*/
 
 // localhost:3000/api/user/add
 routes.post("/add", (req, res)=>{
@@ -14,6 +24,33 @@ routes.post("/add", (req, res)=>{
         var db = con.db("tss7");
         db.collection("user").insertOne(req.body, ()=>{
             res.json({ success : true });
+        })
+    })
+})
+
+routes.post("/auth", (req, res)=>{
+    // console.log(req.body);
+    var username = req.body.username;
+    var password = sha1(req.body.password);
+    MongoClient.connect(mongoUrl, (err, con)=>{
+        var db = con.db("tss7");
+        db.collection("user").find({ email : username }).toArray((err, result)=>{
+            if(result.length == 1)
+            {
+                if(password == result[0].pass)
+                {
+                    var token = jwt.sign({ userid : result[0]._id }, "the stepping stone");
+                    // console.log(token);
+                    res.status(200).json(token);
+                }
+                else{
+
+                    res.status(401).json({ success : false, type : 2 });
+                }
+            }
+            else{
+                res.status(401).json({ success : false, type : 1 });
+            }
         })
     })
 })

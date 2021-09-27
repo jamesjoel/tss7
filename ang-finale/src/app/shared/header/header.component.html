@@ -42,12 +42,29 @@
                          <li class="nav-item d_none">
                             <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                          </li>
-                         <li class="nav-item d_none">
-                            <a class="nav-link" routerLink="/login">Login</a>
-                         </li>
-                         <li class="nav-item d_none">
-                            <a class="nav-link" routerLink="/signup">Signup</a>
-                         </li>
+
+                         <ng-template [ngIf]="_loginAuth.isLoggedIn()" [ngIfElse]="block">
+                           <li class="nav-item d_none">
+                              <a class="nav-link" routerLink="/profile">Profile</a>
+                           </li>
+                           <li class="nav-item d_none">
+                              <a class="nav-link" routerLink="/logout">Logout</a>
+                           </li>
+                         </ng-template>
+
+                         <ng-template #block>
+                           <li class="nav-item d_none">
+                              <a class="nav-link" routerLink="/login">Login</a>
+                           </li>
+                           <li class="nav-item d_none">
+                              <a class="nav-link" routerLink="/signup">Signup</a>
+                           </li>
+                         </ng-template>
+
+
+
+
+                         
                       </ul>
                    </div>
                 </nav>

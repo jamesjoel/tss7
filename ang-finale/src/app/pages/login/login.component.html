@@ -14,6 +14,7 @@
                         <label>Password</label>
                         <input type="password" [(ngModel)]="user.password" class="form-control" />
                     </div>
+                    <p class="text-danger text-center">{{ errorMsg }}</p>
                 </div>
                 <div class="card-footer">
                     <input type="button" (click)="do_login()" value="Login" class="btn btn-primary" />
