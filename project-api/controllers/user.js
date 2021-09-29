@@ -4,6 +4,7 @@ var MongoClient = require("mongodb").MongoClient;
 var mongoUrl = "mongodb://localhost:27017";
 var sha1 = require("sha1");
 var jwt = require("jsonwebtoken");
+var mongo = require("mongodb");
 /*
     { a : "Rohit"}, "Priyanka" -------- 254125511SDFGSDF
 
@@ -54,5 +55,23 @@ routes.post("/auth", (req, res)=>{
         })
     })
 })
+// localhost:3000/api/user/profile
+routes.get("/profile", (req, res)=>{
+    //console.log(req.headers);
+    var token = req.headers.token;
+    // console.log(token);
+    var obj = jwt.verify(token, "the stepping stone");
+    // console.log(obj);
+    
+    var id = mongo.ObjectId(obj.userid);
+    MongoClient.connect(mongoUrl, (err, con)=>{
+        var db= con.db("tss7");
+        db.collection("user").find({_id : id }).toArray((err, result)=>{
+            console.log("-------------", result);
+            res.send(result[0]);
+        })
+    })
+})
+
 
 module.exports = routes;

@@ -15,6 +15,7 @@ import { ContactComponent } from './shared/contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SignupComponent } from './pages/signup/signup.component';
     ContactComponent,
     FooterComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileComponent
     
   ],
   imports: [
