@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { BackdoorGuard } from './guards/backdoor.guard';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
   },
   {
     path : "profile",
-    component : ProfileComponent
+    component : ProfileComponent,
+    canActivate : [BackdoorGuard]
   }
 ];
 
