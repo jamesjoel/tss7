@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiDataComponent } from './page/api-data/api-data.component';
 import { TeacherComponent } from './page/teacher/teacher.component';
 import { SignupComponent } from './page/signup/signup.component';
+import { AddTeacherComponent } from './page/add-teacher/add-teacher.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SignupComponent } from './page/signup/signup.component';
     HelpComponent,
     ApiDataComponent,
     TeacherComponent,
-    SignupComponent
+    SignupComponent,
+    AddTeacherComponent
   ],
   imports: [
     BrowserModule,

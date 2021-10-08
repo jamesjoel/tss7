@@ -1,0 +1,43 @@
+<div class="col-md-6 offset-md-3">
+    <form [formGroup]="myForm">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input formControlName="fullname" type="text" class="form-control" />
+        <div *ngIf="isSubmit && myForm.controls.fullname.errors" class="text-danger">
+            <div *ngIf="myForm.controls.fullname.errors.required">
+                Insert Full Name
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Class</label>
+        <input formControlName="class" type="text" class="form-control" />
+        <div *ngIf="isSubmit && myForm.controls.class.errors" class="text-danger">
+            <div *ngIf="myForm.controls.class.errors.required">
+                Insert Teacher Class
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Subject</label>
+        <input formControlName="subject" type="text" class="form-control" />
+        <div *ngIf="isSubmit && myForm.controls.subject.errors" class="text-danger">
+            <div *ngIf="myForm.controls.subject.errors.required">
+                Insert Teacher Subject
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Salary</label>
+        <input formControlName="salary" type="text" class="form-control" />
+        <div *ngIf="isSubmit && myForm.controls.salary.errors" class="text-danger">
+            <div *ngIf="myForm.controls.salary.errors.required">
+                Insert Salary
+            </div>
+        </div>
+    </div>
+    <br />
+    <Br />
+    <input type="submit" (click)="submit()" value="Add" class="btn btn-primary" />
+    </form>
+</div>

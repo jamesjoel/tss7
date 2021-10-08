@@ -4,5 +4,6 @@ var routes = express.Router();
 routes.use("/api/product", require("../controllers/product"));
 routes.use("/api/category", require("../controllers/category"));
 routes.use("/api/user", require("../controllers/user"));
+routes.use("/api/teacher", require("../controllers/teacher"));
 
 module.exports = routes;

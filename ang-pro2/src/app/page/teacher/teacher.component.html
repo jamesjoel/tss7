@@ -1,14 +1,48 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">
+            <a class="btn btn-primary" routerLink="/add-teacher">Add New Teacher</a>
+            <Br />
+            <!-- <pre>{{ allTeacher | json }}</pre> -->
+            <!-- <pre>{{ teacher | json }}</pre> -->
             <table class="table table-dark table-bordered">
                 <tr>
+                    <th>S.No.</th>
                     <th>Full Name</th>
                     <th>Class</th>
                     <th>Subject</th>
                     <th>Salary</th>
+                    <th>Delete</th>
+                </tr>
+                <tr *ngFor="let t of allTeacher; let n = index">
+                    <td>{{ n+1 }}</td>
+                    <td>{{ t.fullname }}</td>
+                    <td>{{ t.class }}</td>
+                    <td>{{ t.subject }}</td>
+                    <td>{{ t.salary }}</td>
+                    <td><button (click)="askDelete(t)" data-toggle="modal" data-target="#delModal" class="btn btn-danger btn-sm">Delete</button></td>
                 </tr>
             </table>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="delModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Delete Teacher !</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to delete <b *ngIf="teacher.fullname">{{ teacher.fullname }}</b></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+        
+</div>
+

@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { TeacherService } from '../../services/teacher.service';
+
+interface Teacher{
+  _id? : string | null;
+  fullname : string;
+  class : string;
+  salary : number;
+  subject : string;
+}
 
 @Component({
   selector: 'app-teacher',
@@ -8,13 +16,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TeacherComponent implements OnInit {
 
-  constructor(private _http : HttpClient) {
-    this._http.get<any>("http://localhost:3000/api/teacher").subscribe((result)=>{
-      console.log(result);
+  allTeacher : Teacher[] = [];
+  teacher:any={};
+
+  constructor(private _teacherServ : TeacherService){
+    this._teacherServ.getAll().subscribe((result)=>{
+      this.allTeacher = result;
     })
-   }
+  }
 
   ngOnInit(): void {
+  }
+  askDelete(obj:any){
+    // console.log(obj);
+    this.teacher = obj;
   }
 
 }

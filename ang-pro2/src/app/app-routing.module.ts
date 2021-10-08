@@ -8,6 +8,7 @@ import { HelpComponent } from './page/help/help.component';
 import { ApiDataComponent } from './page/api-data/api-data.component';
 import { TeacherComponent } from './page/teacher/teacher.component';
 import { SignupComponent } from './page/signup/signup.component';
+import { AddTeacherComponent } from './page/add-teacher/add-teacher.component';
 
  const routes: Routes = [
   {
@@ -37,6 +38,10 @@ import { SignupComponent } from './page/signup/signup.component';
   {
     path : "signup",
     component : SignupComponent
+  },
+  {
+    path : "add-teacher",
+    component : AddTeacherComponent
   }
 ];
 
