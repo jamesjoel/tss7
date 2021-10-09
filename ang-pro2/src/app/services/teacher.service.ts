@@ -15,4 +15,8 @@ export class TeacherService {
   add(obj:any){
     return this._http.post<any>(this.apiUrl, obj);
   }
+  delete(id:any){
+    return this._http.delete<any>(this.apiUrl+"/"+id);
+    // http://localhost:3000/api/teacher/458
+  }
 }

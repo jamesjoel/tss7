@@ -31,5 +31,24 @@ export class TeacherComponent implements OnInit {
     // console.log(obj);
     this.teacher = obj;
   }
+  confDelete(){
+    this._teacherServ.delete(this.teacher._id).subscribe((result)=>{
+      //console.log("data deleted");
+      let n = this.allTeacher.indexOf(this.teacher);
+      this.allTeacher.splice(n, 1);
+    })
+  }
 
 }
+
+
+/*
+let x = "indore";
+let city = ["mumbai", "pune", "bhopal", "delhi", "indore", "ujjain"];
+
+let n = city.indexOf(x);
+
+city.splice(n, 1);
+
+
+*/
