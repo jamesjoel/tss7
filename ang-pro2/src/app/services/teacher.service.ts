@@ -12,6 +12,15 @@ export class TeacherService {
   getAll(){
     return this._http.get<any>(this.apiUrl);
   }
+
+  getById(id:any){
+    return this._http.get<any>(this.apiUrl+"/"+id);
+  }
+
+  update(obj:any){
+    return this._http.put<any>(this.apiUrl+"/"+obj._id, obj);
+  }
+
   add(obj:any){
     return this._http.post<any>(this.apiUrl, obj);
   }
@@ -19,4 +28,5 @@ export class TeacherService {
     return this._http.delete<any>(this.apiUrl+"/"+id);
     // http://localhost:3000/api/teacher/458
   }
+
 }

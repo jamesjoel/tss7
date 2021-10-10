@@ -9,18 +9,18 @@
                 <tr>
                     <th>S.No.</th>
                     <th>Full Name</th>
-                    <th>Class</th>
-                    <th>Subject</th>
-                    <th>Salary</th>
+                    
+                    <th>View</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
                 <tr *ngFor="let t of allTeacher; let n = index">
                     <td>{{ n+1 }}</td>
                     <td>{{ t.fullname }}</td>
-                    <td>{{ t.class }}</td>
-                    <td>{{ t.subject }}</td>
-                    <td>{{ t.salary }}</td>
+                    
+                    <td><a routerLink="#" class="btn btn-success btn-sm">View</a></td>
                     <td><button (click)="askDelete(t)" data-toggle="modal" data-target="#delModal" class="btn btn-danger btn-sm">Delete</button></td>
+                    <td><a routerLink="/edit-teacher/{{ t._id }}" class="btn btn-info btn-sm">Edit</a></td>
                 </tr>
             </table>
         </div>

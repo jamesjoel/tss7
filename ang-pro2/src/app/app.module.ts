@@ -18,6 +18,7 @@ import { ApiDataComponent } from './page/api-data/api-data.component';
 import { TeacherComponent } from './page/teacher/teacher.component';
 import { SignupComponent } from './page/signup/signup.component';
 import { AddTeacherComponent } from './page/add-teacher/add-teacher.component';
+import { EditTeacherComponent } from './page/edit-teacher/edit-teacher.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AddTeacherComponent } from './page/add-teacher/add-teacher.component';
     ApiDataComponent,
     TeacherComponent,
     SignupComponent,
-    AddTeacherComponent
+    AddTeacherComponent,
+    EditTeacherComponent
   ],
   imports: [
     BrowserModule,
