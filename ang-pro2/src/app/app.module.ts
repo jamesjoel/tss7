@@ -19,6 +19,9 @@ import { TeacherComponent } from './page/teacher/teacher.component';
 import { SignupComponent } from './page/signup/signup.component';
 import { AddTeacherComponent } from './page/add-teacher/add-teacher.component';
 import { EditTeacherComponent } from './page/edit-teacher/edit-teacher.component';
+import { ProductComponent } from './page/product/product.component';
+import { DiscountPipe } from './pipes/discount.pipe';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { EditTeacherComponent } from './page/edit-teacher/edit-teacher.component
     TeacherComponent,
     SignupComponent,
     AddTeacherComponent,
-    EditTeacherComponent
+    EditTeacherComponent,
+    ProductComponent,
+    DiscountPipe
+    
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { TeacherComponent } from './page/teacher/teacher.component';
 import { SignupComponent } from './page/signup/signup.component';
 import { AddTeacherComponent } from './page/add-teacher/add-teacher.component';
 import { EditTeacherComponent } from './page/edit-teacher/edit-teacher.component';
+import { ProductComponent } from './page/product/product.component';
 
  const routes: Routes = [
   {
@@ -47,6 +48,10 @@ import { EditTeacherComponent } from './page/edit-teacher/edit-teacher.component
   {
     path : "edit-teacher/:id",
     component : EditTeacherComponent
+  },
+  {
+    path : "product",
+    component : ProductComponent
   }
 ];
 

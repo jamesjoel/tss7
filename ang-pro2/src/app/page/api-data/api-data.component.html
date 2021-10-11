@@ -13,7 +13,7 @@
                 </tr>
                 <tr *ngFor="let x of allData; let n = index">
                     <td>{{ n+1 }}</td>
-                    <td>{{ x.first_name }}</td>
+                    <td>{{ x.first_name | uppercase }}</td>
                     <td>{{ x.last_name }}</td>
                     <td>{{ x.email }}</td>
                     <td><img src="{{ x.avatar }}" height="80" /></td>

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <!-- <pre>{{ allProduct | json }}</pre> -->
+            <table class="table table-dark table-hover table-bordered table-striped">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Discount</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                    <th>Rating</th>
+                    <th>Total</th>
+                </tr>
+                <tr *ngFor="let p of allProduct; let n = index">
+                    <td>{{ n+1 }}</td>
+                    <td>{{ p.title }}</td>
+                    <td>{{ p.price | currency }}</td>
+                    <td>{{ p.price | discount : p.rating.rate }}</td>
+                    <td>{{ p.category | uppercase }}</td>
+                    <td><img src="{{ p.image }}" height = "100" width = "100"/></td>
+                    <td>{{ p.rating.rate }}</td>
+                    <td>{{ p.rating.count }}</td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+</div>
