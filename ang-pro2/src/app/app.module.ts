@@ -21,6 +21,7 @@ import { AddTeacherComponent } from './page/add-teacher/add-teacher.component';
 import { EditTeacherComponent } from './page/edit-teacher/edit-teacher.component';
 import { ProductComponent } from './page/product/product.component';
 import { DiscountPipe } from './pipes/discount.pipe';
+import { MydirDirective } from './dir/mydir.directive';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { DiscountPipe } from './pipes/discount.pipe';
     AddTeacherComponent,
     EditTeacherComponent,
     ProductComponent,
-    DiscountPipe
+    DiscountPipe,
+    MydirDirective
     
   ],
   imports: [
