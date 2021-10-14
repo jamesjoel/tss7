@@ -10,6 +10,12 @@
                 </div>
 
                 <br />
+
+                <select class="form-control">
+                    <option value="">Select</option>
+                    <option *ngFor="let c of city" value="{{ c.id }}">{{ c.name }}</option>
+                </select>
+
                 <Br />
                 <input type="submit" value="Signup" (click)="signup()" class="btn btn-primary" />
             </div>

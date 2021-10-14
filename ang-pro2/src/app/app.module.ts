@@ -22,6 +22,8 @@ import { EditTeacherComponent } from './page/edit-teacher/edit-teacher.component
 import { ProductComponent } from './page/product/product.component';
 import { DiscountPipe } from './pipes/discount.pipe';
 import { MydirDirective } from './dir/mydir.directive';
+import { Box1Component } from './shared/box1/box1.component';
+import { Box2Component } from './shared/box2/box2.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { MydirDirective } from './dir/mydir.directive';
     EditTeacherComponent,
     ProductComponent,
     DiscountPipe,
-    MydirDirective
+    MydirDirective,
+    Box1Component,
+    Box2Component
     
   ],
   imports: [

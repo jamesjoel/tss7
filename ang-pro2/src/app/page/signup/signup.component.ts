@@ -11,6 +11,16 @@ export class SignupComponent implements OnInit {
   userFrm : FormGroup;
 
   check=false;
+  city = [
+    {
+      id : 1,
+      name : "indore"
+    },
+    {
+      id : 2,
+      name : "mumbai"
+    }
+  ]
 
   constructor(private _fb : FormBuilder) {
     this.userFrm = this._fb.group({

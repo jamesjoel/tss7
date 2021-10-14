@@ -35,10 +35,7 @@
             <div class="form-group">
                 <label>City</label>
                 <select [ngClass]="{'is-invalid' : a && myForm.controls.city.errors}" formControlName="city" class="form-control">
-                    <option value="">Select</option>
-                    <option value="indore">Indore</option>
-                    <option value="mumbai">Mumbai</option>
-                    <option value="pune">Pune</option>
+                    <option *ngFor="let c of city">{{ c.name }}</option>
                 </select>
                 <div class="text-danger" *ngIf="a && myForm.controls.city.errors">Select Your City</div>
             </div>

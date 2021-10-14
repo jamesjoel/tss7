@@ -9,6 +9,8 @@ export class ContactComponent implements OnInit {
 
   a = 13;
 
+  name = "rohit verma";
+
   constructor() {
     console.log("welcome");
    }

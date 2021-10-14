@@ -21,6 +21,25 @@ export class SignupComponent implements OnInit {
   a=false;
   msg="";
 
+  city = [
+    {
+      id : 1,
+      name : "indore"
+    },
+    {
+      id : 2,
+      name : "mumbai"
+    },
+    {
+      id : 3,
+      name : "pune"
+    },
+    {
+      id :  4,
+      name : "delhi"
+    }
+  ]
+
   constructor(
       private _fb : FormBuilder, 
       private _user : UserService,

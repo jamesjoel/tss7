@@ -28,6 +28,7 @@ interface Product {
 })
 export class ApiDataComponent implements OnInit {
   allData:Abc[] = [];
+  total=0;
 
   // allData:Data[]=[];
   // allData:Product[]=[];
@@ -36,6 +37,7 @@ export class ApiDataComponent implements OnInit {
     this._http.get<any>("https://reqres.in/api/users?page=2").subscribe((result)=>{
       console.log(result.data);
       this.allData = result.data;
+      this.total = this.allData.length;
     });
    }
   // (public a : HttpClient, private a: HttpClient)
