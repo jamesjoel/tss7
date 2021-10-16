@@ -1,0 +1,9 @@
+<div>
+    <h1>This is Child Component</h1>
+    <button class="btn btn-danger" (click)="send()">Go</button>
+    <Br />
+    
+    <input type="text" [(ngModel)]="myName">
+    <button class="btn btn-info" (click)="sendToParent()">Send To Parent</button>
+    <h5 *ngFor="let c of cityArr">{{ c }}</h5>
+</div>

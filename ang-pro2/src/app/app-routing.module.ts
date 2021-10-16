@@ -11,6 +11,7 @@ import { SignupComponent } from './page/signup/signup.component';
 import { AddTeacherComponent } from './page/add-teacher/add-teacher.component';
 import { EditTeacherComponent } from './page/edit-teacher/edit-teacher.component';
 import { ProductComponent } from './page/product/product.component';
+import { TermsComponent } from './page/terms/terms.component';
 
  const routes: Routes = [
   {
@@ -52,6 +53,10 @@ import { ProductComponent } from './page/product/product.component';
   {
     path : "product",
     component : ProductComponent
+  },
+  {
+    path : "terms",
+    component : TermsComponent
   }
 ];
 

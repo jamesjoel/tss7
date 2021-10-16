@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">
+                Terms and Condition Page
+            </h1>    
+            
+                <input type="text" [(ngModel)]="city"/>
+                <button class="btn btn-primary" (click)="goToChild()">Go to Child</button>
+                <br />
+                {{ b.name }}
+                <br />
+                <h3 *ngFor="let a of nameArr">{{ a }}</h3>
+                <br />
+            
+        </div>
+    </div>
+
+
+</div>
+<hr />
+<app-child-box [cityArr]="cityArr" (myEvent)="rec($event)" (event1)="recFormChild($event)"></app-child-box>
