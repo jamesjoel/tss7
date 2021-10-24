@@ -6,15 +6,15 @@ var sha1 = require("sha1");
 
 routes.get("/", (req, res)=>{
     
-    var _id = req.session._id;
+    var a = req.session._id;
     // the _id is simple string so we have to convert into ObjectId
 
-    _id = mongodb.ObjectId(_id);
+    var b = mongodb.ObjectId(a);
 
     // console.log(_id);
     MongoClient.connect("mongodb://localhost:27017", (err, con)=>{
         var db = con.db("tss7");
-        db.collection("user").find({ _id : _id }).toArray((err, result)=>{
+        db.collection("user").find({ _id : b }).toArray((err, result)=>{
             
             res.render("profile", { result : result[0] });
         })

@@ -5,7 +5,11 @@ var route = express.Router();
 //localhost:3000/contact/
 
 route.get("/", (req, res)=>{
-    res.render("contact");
+    var pagedata = { name : "rohit"};
+    res.render("contact", pagedata);
+
+    var x = "rohit";
+    res.render("contact", { name : x });
 })
 
 

@@ -14,6 +14,7 @@ routes.post("/auth", (req, res)=>{
     // console.log(req.body);
     var u = req.body.username;
     var p = req.body.password;
+    
     MongoClient.connect(mongoUrl, (err, con)=>{
         var db = con.db("tss7");
         db.collection("user").find({ username : u}).toArray((err, result)=>{

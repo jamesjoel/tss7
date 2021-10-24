@@ -4,6 +4,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 
 import { Router } from '@angular/router';
+import { lengthCheck, numCheck, rePassCheck } from '../../helpers/custome.validation';
+
 
 // FormGroup ---- interface
 // FormBuilder ---- service
@@ -52,7 +54,11 @@ export class SignupComponent implements OnInit {
       re_pass : ["", Validators.required],
       contact : ["", Validators.required],
       city : ["", Validators.required]
-    });
+    },
+    {
+      validator : [rePassCheck(), numCheck(), lengthCheck()]
+    }
+    );
 
     // console.log(this.myForm);
    }

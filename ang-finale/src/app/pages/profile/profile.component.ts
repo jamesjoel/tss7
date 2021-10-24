@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfileService } from '../../services/user-profile.service';
+import { User } from '../../models/user.model';
 
-interface User{
-  _id : null|string;
-  full_name : string;
-  email : string;
-  pass : string;
-  contact : string;
-  city : string;
-}
 
 @Component({
   selector: 'app-profile',
