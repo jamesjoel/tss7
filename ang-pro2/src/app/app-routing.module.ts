@@ -12,6 +12,7 @@ import { AddTeacherComponent } from './page/add-teacher/add-teacher.component';
 import { EditTeacherComponent } from './page/edit-teacher/edit-teacher.component';
 import { ProductComponent } from './page/product/product.component';
 import { TermsComponent } from './page/terms/terms.component';
+import { FileUploadComponent } from './pages/file-upload/file-upload.component';
 
  const routes: Routes = [
   {
@@ -57,6 +58,10 @@ import { TermsComponent } from './page/terms/terms.component';
   {
     path : "terms",
     component : TermsComponent
+  },
+  {
+    path : "file-upload",
+    component : FileUploadComponent
   }
 ];
 

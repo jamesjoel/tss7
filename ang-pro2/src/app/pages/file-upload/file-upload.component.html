@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>File Upload in Angular</h2>
+            <div class="form-group">
+                <label>Select Image</label>
+                <input type="file" (change)="upload(file)" class="form-control" #file />
+                <!-- <h1>hello</h1> -->
+            </div>
+            <Br />
+            <Br />
+            <!-- <button class="btn btn-primary" (click)="upload(file)">Upload</button> -->
+        </div>
+    </div>
+
+    <div class="row mt-3">
+       
+            <div class="col-md-10 offset-md-1">
+                <img *ngFor="let a of images" src="{{ a }}" height="200" width="200" />
+            </div>
+       
+    </div>
+</div>

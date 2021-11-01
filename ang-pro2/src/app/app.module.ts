@@ -26,6 +26,7 @@ import { Box1Component } from './shared/box1/box1.component';
 import { Box2Component } from './shared/box2/box2.component';
 import { TermsComponent } from './page/terms/terms.component';
 import { ChildBoxComponent } from './shared/child-box/child-box.component';
+import { FileUploadComponent } from './pages/file-upload/file-upload.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ChildBoxComponent } from './shared/child-box/child-box.component';
     Box1Component,
     Box2Component,
     TermsComponent,
-    ChildBoxComponent
+    ChildBoxComponent,
+    FileUploadComponent
     
   ],
   imports: [
